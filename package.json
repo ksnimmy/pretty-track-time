@@ -1,6 +1,6 @@
 {
   "name": "pretty-track-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Display seconds as h:mm:ss (media format)",
   "main": "index.js",
   "dependencies": {},
