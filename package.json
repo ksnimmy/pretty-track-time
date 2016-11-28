@@ -1,0 +1,43 @@
+{
+  "name": "pretty-track-time",
+  "version": "1.0.0",
+  "description": "Display seconds as h:mm:ss (media format)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.11.0",
+    "eslint-loader": "^1.6.1",
+    "uglify-js": "^2.7.4",
+    "webpack": "^1.13.3",
+    "webpack-umd-external": "^1.0.2"
+  },
+  "scripts": {
+    "build": "npm run build-babel && npm run build-dist-dev && npm run build-dist-prod",
+    "build-dist-dev": "NODE_ENV=development webpack --config webpack.config --colors",
+    "build-dist-prod": "NODE_ENV=production webpack --config webpack.config --progress --colors -p",
+    "build-babel": "babel ./src/prettyTrackTime.js --out-file index.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voronianski/pretty-track-time.git"
+  },
+  "keywords": [
+    "time",
+    "format",
+    "pretty-time"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voroniansk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voronianski/pretty-track-time/issues"
+  },
+  "homepage": "https://github.com/voronianski/pretty-track-time#readme"
+}
